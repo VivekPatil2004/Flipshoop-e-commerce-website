@@ -1,0 +1,264 @@
+/* ================= CATEGORY PAGE STYLES ================= */
+
+body {
+    background-color: #f1f3f6;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: #212121;
+}
+
+.category-container {
+    max-width: 1380px;
+    margin: 8px auto;
+    display: flex;
+    gap: 10px;
+    padding: 0 8px;
+    align-items: flex-start;
+}
+
+/* --- SIDEBAR FILTERS --- */
+.filter-sidebar {
+    width: 270px;
+    min-width: 270px;
+    background: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .16);
+    position: sticky;
+    top: 60px;
+}
+
+.filter-header {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.clear-btn {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2874f0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.filter-section {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.filter-title {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #212121;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Checkbox Look */
+.checkbox-row {
+    font-size: 14px;
+    color: #212121;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+}
+
+.checkbox-row input {
+    display: none;
+}
+
+.cb-box {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #c2c2c2;
+    border-radius: 1px;
+    display: inline-block;
+    position: relative;
+    background: #fff;
+}
+
+.checkbox-row:hover .cb-box {
+    border-color: #212121;
+}
+
+.checkbox-row input:checked+.cb-box {
+    background: #2874f0;
+    border-color: #2874f0;
+}
+
+.checkbox-row input:checked+.cb-box::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Radio Look */
+.radio-circle {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #c2c2c2;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.checkbox-row input:checked+.radio-circle {
+    border-color: #2874f0;
+}
+
+.checkbox-row input:checked+.radio-circle::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2874f0;
+}
+
+.star-icon {
+    font-size: 10px;
+    color: #878787;
+}
+
+/* Price Slider */
+.price-slider-wrap {
+    padding: 10px 0;
+}
+
+.range-slider {
+    width: 100%;
+    height: 4px;
+    background: #e0e0e0;
+    appearance: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+.range-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #2874f0;
+    cursor: pointer;
+    border: 1px solid #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #878787;
+    margin-top: 8px;
+}
+
+/* --- MAIN CONTENT --- */
+.product-list-content {
+    flex: 1;
+}
+
+.list-header {
+    background: #fff;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .16);
+    margin-bottom: 8px;
+}
+
+.result-count {
+    font-size: 16px;
+    font-weight: 500;
+    color: #212121;
+    margin-right: auto;
+}
+
+.sort-box {
+    font-size: 14px;
+    color: #212121;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-box select {
+    border: none;
+    font-weight: 500;
+    color: #212121;
+    cursor: pointer;
+}
+
+/* --- GRID OVERRIDES FOR YOUR EXISTING CARDS --- */
+.category-grid {
+    display: grid;
+    /* This creates a 4-column layout */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+/* Force your existing .product-card and .offer-product-card to fill the grid cells */
+.category-grid .product-card,
+.category-grid .offer-product-card {
+    width: auto !important;
+    /* Override fixed width from index.html */
+    margin: 0 !important;
+    /* Remove margins to fit grid */
+    height: 100%;
+    /* Equal height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure details push buttons down */
+.category-grid .card-details,
+.category-grid .offer-details {
+    flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 1250px) {
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .category-container {
+        flex-direction: column;
+    }
+
+    .filter-sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

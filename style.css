@@ -1,0 +1,273 @@
+/* --- 1. RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #f1f3f6;
+    overflow-x: hidden;
+}
+
+/* --- 2. HEADER (Blue Section) --- */
+.header {
+    background-color: #2874f0;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    width: 100%;
+    max-width: 1248px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* LOGO */
+.logo-container {
+    background-color: #fff;
+    padding: 4px 8px;
+    border-radius: 2px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    cursor: pointer;
+    flex-shrink: 0;
+    /* Prevents logo from shrinking */
+}
+
+.logo-text {
+    color: #2874f0;
+    font-size: 18px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+/* SEARCH AREA */
+.search-area {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    max-width: 550px;
+    margin-left: 10px;
+}
+
+/* Transparent Input (Visible on Desktop) */
+.search-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    padding: 0 10px;
+}
+
+.search-input::placeholder {
+    color: #484848;
+    opacity: 1;
+}
+
+/* White Button Box */
+.search-btn {
+    background-color: #fff;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    margin-left: 12px;
+    flex-shrink: 0;
+}
+
+.search-btn i {
+    color: #2874f0;
+    font-size: 17px;
+}
+
+/* LOGIN & CART */
+.login-btn {
+    background-color: #fff;
+    color: #2874f0;
+    border: none;
+    height: 32px;
+    padding: 0 25px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 35px;
+    gap: 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* --- 3. SUB NAV (Categories) --- */
+.sub-nav {
+    background-color: #fff;
+    height: 40px;
+    border-bottom: 1px solid #dcdcdc;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .16);
+    display: flex;
+    justify-content: center;
+}
+
+.sub-nav-inner {
+    width: 100%;
+    max-width: 1248px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.category-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.category-item {
+    font-size: 14px;
+    font-weight: 500;
+    color: #212121;
+    cursor: pointer;
+    transition: color 0.1s;
+    white-space: nowrap;
+    outline: none;
+}
+
+.category-item:hover {
+    color: #2874f0;
+}
+
+.category-item:focus {
+    color: #2874f0;
+    font-weight: 700;
+}
+
+/* --- 4. RESPONSIVE DESIGN --- */
+
+/* Tablet Adjustments */
+@media (max-width: 900px) {
+    .header-inner {
+        padding: 0 10px;
+    }
+
+    .cart-container {
+        margin-left: 20px;
+    }
+
+    .cart-container span {
+        display: none;
+    }
+
+    /* Hide "Cart" text */
+    .login-btn {
+        margin-left: 20px;
+        padding: 0 15px;
+    }
+}
+
+/* Mobile Layout (iPhone 16 View) */
+@media (max-width: 600px) {
+    .header-inner {
+        justify-content: space-between;
+        /* Spread Logo left, Buttons right */
+        padding: 0 12px;
+    }
+
+    /* 1. Logo stays on left */
+    .logo-container {
+        margin-right: auto;
+        /* Pushes everything else to the right */
+    }
+
+    /* 2. Hide Search Input text */
+    .search-input {
+        display: none;
+    }
+
+    /* 3. Search Button moves to the right group */
+    .search-area {
+        flex-grow: 0;
+        /* Don't stretch */
+        margin-left: 10px;
+        width: auto;
+    }
+
+    .search-btn {
+        margin-left: 0;
+        /* Remove desktop margin */
+    }
+
+    /* 4. Login Button stays visible */
+    .login-btn {
+        margin-left: 12px;
+        /* Small gap from search button */
+        padding: 0 15px;
+        /* Compact padding */
+    }
+
+    /* 5. Hide Cart  */
+    .cart-container {
+        display: none;
+    }
+
+    /* 6. Sub Nav Scroll */
+    .sub-nav {
+        justify-content: flex-start;
+        /* Align left for scroll */
+        overflow-x: auto;
+    }
+
+    .sub-nav-inner {
+        padding: 0 12px;
+        width: auto;
+        /* Allow content to dictate width */
+    }
+
+    .category-list {
+        gap: 20px;
+        padding-right: 20px;
+        /* Padding for scroll end */
+    }
+
+    /* Hide Scrollbar */
+    .sub-nav::-webkit-scrollbar {
+        display: none;
+    }
+}

@@ -1,0 +1,222 @@
+/* --- TOP OFFERS SECTION  --- */
+
+.top-offers-section {
+    max-width: 1248px;
+    margin: auto;
+    padding: 30px 12px;
+    background:#fff; /* Matches target background */
+    font-family: "Poppins", sans-serif;
+}
+
+.top-offers-header {
+    margin-bottom: 18px;
+    /* Removed border-bottom */
+}
+
+.top-offers-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+}
+
+/* 4-Column Grid */
+.top-offers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* Card Styling */
+.offer-product-card {
+    background: #fff;
+    border-radius: 12px; /* Rounded corners */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08); /* Softer shadow */
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 410px; /* Fixed height for uniformity */
+    border: none; /* Removed the grey border */
+}
+
+.offer-product-card:hover {
+    transform: translateY(-6px); /* Float effect */
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* Image Wrapper */
+.offer-image-wrap {
+    width: 100%;
+    height: 190px;
+    background: #f9fafb;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.offer-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+/* Hover Zoom Effect on Image */
+.offer-product-card:hover .offer-img {
+    transform: scale(1.08);
+    filter: brightness(1.05);
+}
+
+/* Discount Badge */
+.offer-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #16a34a; /* Target Green */
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+/* Content Details */
+.offer-details {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.offer-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    height: 38px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Rating Row */
+.offer-rating-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.offer-rating-box {
+    background: #16a34a;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 0; /* Reset margin */
+}
+
+.offer-rating-box i {
+    font-size: 10px;
+}
+
+.offer-reviews {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Pricing */
+.offer-price-row {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.offer-price {
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+}
+
+.offer-mrp {
+    font-size: 14px;
+    color: #888;
+    text-decoration: line-through;
+}
+
+/* Button Container */
+.offer-btn-wrap {
+    padding: 0 14px 14px 14px;
+    margin-top: auto;
+}
+
+/* Cart Button */
+.offer-cart-btn {
+    width: 100%;
+    padding: 9px;
+    border: none;
+    background: #2563eb; /* Target Blue */
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.offer-cart-btn:hover {
+    background: #1d4ed8;
+}
+
+/* --- Responsive Grid --- */
+
+@media (max-width: 1200px) {
+    .top-offers-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .top-offers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .offer-product-card {
+        height: auto;
+    }
+    
+    .offer-image-wrap {
+        height: 170px;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-offers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .offer-image-wrap {
+        height: 150px;
+    }
+    
+    .offer-cart-btn {
+        font-size: 13px;
+        padding: 8px;
+    }
+}

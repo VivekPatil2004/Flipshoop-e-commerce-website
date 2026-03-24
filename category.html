@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - FlipShop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Rec.css"> 
+    <link rel="stylesheet" href="Deal.css">
+    <link rel="stylesheet" href="offer.css">
+    
+    <link rel="stylesheet" href="category.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo-container" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <span class="logo-text">FlipShop</span>
+            </div>
+            <div class="search-area">
+                <input type="text" class="search-input" placeholder="Search for products, brands and more">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <a href="#" class="login-btn"><i class="fa-regular fa-user"></i> Login</a>
+            <div class="cart-container" onclick="window.location.href='cart.html'" style="cursor: pointer;">
+                <i class="fa-solid fa-cart-shopping"></i> <span>Cart</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sub-nav">
+        <div class="sub-nav-inner">
+            <ul class="category-list">
+                <li onclick="window.location.href='category.html'" style="cursor: pointer;">Electronics</li>
+                <li onclick="window.location.href='category.html'" style="cursor: pointer;">Mobiles</li>
+                <li onclick="window.location.href='category.html'" style="cursor: pointer;">Fashion</li>
+                <li onclick="window.location.href='category.html'" style="cursor: pointer;">Grocery</li>
+                <li onclick="window.location.href='category.html'" style="cursor: pointer;">Home</li>
+                <li onclick="window.location.href='category.html'" style="cursor: pointer;">Appliances</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="category-container">
+        
+        <aside class="filter-sidebar">
+            <div class="filter-header">
+                <h3>Filters</h3>
+                <a href="#" class="clear-btn">Clear All</a>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-title">Category</div>
+                <div class="filter-list">
+                    <label class="checkbox-row"><input type="checkbox"> <span class="cb-box"></span> Electronics</label>
+                    <label class="checkbox-row"><input type="checkbox"> <span class="cb-box"></span> Mobiles</label>
+                    <label class="checkbox-row"><input type="checkbox"> <span class="cb-box"></span> Fashion</label>
+                    <label class="checkbox-row"><input type="checkbox"> <span class="cb-box"></span> Appliances</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-title">Price Range</div>
+                <div class="price-slider-wrap">
+                    <input type="range" min="0" max="150000" value="0" class="range-slider">
+                    <div class="range-labels">
+                        <span>₹0</span>
+                        <span>₹1,50,000+</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-title">Brand</div>
+                <div class="filter-list">
+                    <label class="checkbox-row"><input type="checkbox"> <span class="cb-box"></span> Samsung</label>
+                    <label class="checkbox-row"><input type="checkbox"> <span class="cb-box"></span> Sony</label>
+                    <label class="checkbox-row"><input type="checkbox"> <span class="cb-box"></span> Apple</label>
+                    <label class="checkbox-row"><input type="checkbox"> <span class="cb-box"></span> Nike</label>
+                    <label class="checkbox-row"><input type="checkbox"> <span class="cb-box"></span> Philips</label>
+                    <label class="checkbox-row"><input type="checkbox"> <span class="cb-box"></span> boAt</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-title">Customer Ratings</div>
+                <div class="filter-list">
+                    <label class="checkbox-row">
+                        <input type="radio" name="rating"> <span class="radio-circle"></span>
+                        4 <i class="fa-solid fa-star star-icon"></i> & above
+                    </label>
+                    <label class="checkbox-row">
+                        <input type="radio" name="rating"> <span class="radio-circle"></span>
+                        3 <i class="fa-solid fa-star star-icon"></i> & above
+                    </label>
+                    <label class="checkbox-row">
+                        <input type="radio" name="rating"> <span class="radio-circle"></span>
+                        2 <i class="fa-solid fa-star star-icon"></i> & above
+                    </label>
+                    <label class="checkbox-row">
+                        <input type="radio" name="rating"> <span class="radio-circle"></span>
+                        1 <i class="fa-solid fa-star star-icon"></i> & above
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+
+        <main class="product-list-content">
+            
+            <div class="list-header">
+                <span class="result-count">Showing 15 results</span>
+                <div class="sort-box">
+                    <span>Sort by:</span>
+                    <select>
+                        <option>Popularity</option>
+                        <option>Price -- Low to High</option>
+                        <option>Price -- High to Low</option>
+                        <option>Newest First</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="category-grid">
+
+                <div class="product-card" onclick="window.location.href='product-samsung.html'">
+                    <div class="image-container">
+                        <span class="badge">28% OFF</span>
+                        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=500&auto=format&fit=crop" class="product-img" alt="Samsung S23 Ultra">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">Samsung Galaxy S23 Ultra 5G (Phantom Black, 12GB RAM, 256GB)</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.5 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(12,453)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹89,999</span>
+                            <span class="mrp">₹1,24,999</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product.html'">
+                    <div class="image-container">
+                        <span class="badge">35% OFF</span>
+                        <img src="image/img1.avif" class="product-img" alt="TV">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">Sony Bravia 55 inch 4K Ultra HD Smart LED TV</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.3 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(8,234)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹54,990</span>
+                            <span class="mrp">₹84,999</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-macbook.html'">
+                    <div class="image-container">
+                        <span class="badge">17% OFF</span>
+                        <img src="image/img2.avif" class="product-img" alt="Laptop">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">Apple MacBook Air M2 Chip (13-inch, 8GB RAM, 256GB SSD)</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.7 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(5,621)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹99,900</span>
+                            <span class="mrp">₹1,19,900</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-earbuds.html'">
+                    <div class="image-container">
+                        <span class="badge">57% OFF</span>
+                        <img src="image/img3.jpg" class="product-img" alt="Headphones">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">boAt Airdopes 131 TWS Earbuds with 60H Playback</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.2 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(28,421)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹1,299</span>
+                            <span class="mrp">₹2,990</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-jeans.html'">
+                    <div class="image-container">
+                        <span class="badge">45% OFF</span>
+                        <img src="image/img4.webp" class="product-img" alt="Jeans">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">Levi's Men's Regular Fit Jeans - Blue Color</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.3 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(6,421)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹1,799</span>
+                            <span class="mrp">₹3,299</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="offer-product-card" onclick="window.location.href='product-airfryer.html'">
+                    <div class="offer-image-wrap">
+                        <span class="offer-badge">38% OFF</span>
+                        <img src="image/off1.webp" class="offer-img" alt="Air Fryer">
+                    </div>
+                    <div class="offer-details">
+                        <div class="offer-title">Philips Air Fryer HD9252/90 with Rapid Air Technology</div>
+                        <div class="offer-rating-row">
+                            <span class="offer-rating-box">4.6 <i class="fa-solid fa-star"></i></span>
+                            <span class="offer-reviews">(15,234)</span>
+                        </div>
+                        <div class="offer-price-row">
+                            <span class="offer-price">₹7,999</span>
+                            <span class="offer-mrp">₹12,995</span>
+                        </div>
+                    </div>
+                    <div class="offer-btn-wrap">
+                        <button class="offer-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="offer-product-card" onclick="window.location.href='product-earbuds.html'">
+                    <div class="offer-image-wrap">
+                        <span class="offer-badge">57% OFF</span>
+                        <img src="image/off2.webp" class="offer-img" alt="Earbuds">
+                    </div>
+                    <div class="offer-details">
+                        <div class="offer-title">boAt Airdopes 131 TWS Earbuds with 60H Playback</div>
+                        <div class="offer-rating-row">
+                            <span class="offer-rating-box">4.2 <i class="fa-solid fa-star"></i></span>
+                            <span class="offer-reviews">(28,421)</span>
+                        </div>
+                        <div class="offer-price-row">
+                            <span class="offer-price">₹1,299</span>
+                            <span class="offer-mrp">₹2,990</span>
+                        </div>
+                    </div>
+                    <div class="offer-btn-wrap">
+                        <button class="offer-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="offer-product-card" onclick="window.location.href='product-fridge.html'">
+                    <div class="offer-image-wrap">
+                        <span class="offer-badge">27% OFF</span>
+                        <img src="image/off4.jpg" class="offer-img" alt="Refrigerator">
+                    </div>
+                    <div class="offer-details">
+                        <div class="offer-title">LG 260L 3 Star Frost Free Double Door Refrigerator</div>
+                        <div class="offer-rating-row">
+                            <span class="offer-rating-box">4.4 <i class="fa-solid fa-star"></i></span>
+                            <span class="offer-reviews">(4,521)</span>
+                        </div>
+                        <div class="offer-price-row">
+                            <span class="offer-price">₹21,990</span>
+                            <span class="offer-mrp">₹29,990</span>
+                        </div>
+                    </div>
+                    <div class="offer-btn-wrap">
+                        <button class="offer-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-camera.html'">
+                    <div class="image-container">
+                        <span class="badge">40% OFF</span>
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=500&auto=format&fit=crop" class="product-img" alt="Camera">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">Canon EOS 1500D DSLR Camera Body+ 18-55 mm</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.5 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(12,500)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹35,990</span>
+                            <span class="mrp">₹59,990</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-mouse.html'">
+                    <div class="image-container">
+                        <span class="badge">65% OFF</span>
+                        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=500&auto=format&fit=crop" class="product-img" alt="Mouse">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">Logitech G304 Lightspeed Wireless Gaming Mouse</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.4 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(8,900)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹2,499</span>
+                            <span class="mrp">₹3,795</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-watch.html'">
+                    <div class="image-container">
+                        <span class="badge">20% OFF</span>
+                        <img src="https://img.tatacliq.com/images/i11/1316Wx1468H/MP000000017667303_1316Wx1468H_202305242003051.jpeg" class="product-img" alt="Watch">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">Fossil Gen 6 Smartwatch with AMOLED Display</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.1 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(3,100)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹14,995</span>
+                            <span class="mrp">₹18,995</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-jbl.html'">
+                    <div class="image-container">
+                        <span class="badge">50% OFF</span>
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=500&auto=format&fit=crop" class="product-img" alt="Headphone">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">JBL Tune 510BT, On Ear Wireless Headphones with Mic</div>
+                        <div class="rating-row">
+                            <span class="rating-box">3.9 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(22,100)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹2,499</span>
+                            <span class="mrp">₹4,999</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-backpack.html'">
+                    <div class="image-container">
+                        <span class="badge">60% OFF</span>
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=500&auto=format&fit=crop" class="product-img" alt="Bag">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">American Tourister 32 Ltrs Black Casual Backpack</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.3 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(18,400)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹1,199</span>
+                            <span class="mrp">₹3,200</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-keyboard.html'">
+                    <div class="image-container">
+                        <span class="badge">30% OFF</span>
+                        <img src="https://images.unsplash.com/photo-1595225476474-87563907a212?q=80&w=500&auto=format&fit=crop" class="product-img" alt="Keyboard">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">Razer BlackWidow V3 Tenkeyless Mechanical Keyboard</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.6 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(1,200)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹6,999</span>
+                            <span class="mrp">₹9,999</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-powerbank.html'">
+                    <div class="image-container">
+                        <span class="badge">15% OFF</span>
+                        <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?q=80&w=500&auto=format&fit=crop" class="product-img" alt="Powerbank">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">Mi 20000mAh Power Bank 3i with 18W Fast Charging</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.3 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(45,000)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹1,699</span>
+                            <span class="mrp">₹2,199</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-speaker.html'">
+                    <div class="image-container">
+                        <span class="badge">45% OFF</span>
+                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQUaEYh7B93EhMEWRzmwXCFgCbHCDH0JOIxDfbjkj0XJMJmzHgSR3aG09X2NyRGulXD94FbAUCMPQIqALZ9bZLDZ3x0hHje" class="product-img" alt="Speaker">
+                    </div>
+                    <div class="card-details">
+                        <div class="title">Sony SRS-XB13 Wireless Extra Bass Portable Speaker</div>
+                        <div class="rating-row">
+                            <span class="rating-box">4.5 <i class="fa-solid fa-star"></i></span>
+                            <span class="review-count">(9,800)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹3,290</span>
+                            <span class="mrp">₹4,990</span>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

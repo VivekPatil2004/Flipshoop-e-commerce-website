@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - FlipShop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo-container" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <span class="logo-text">FlipShop</span>
+            </div>
+            <div class="search-area">
+                <input type="text" class="search-input" placeholder="Search for products, brands and more">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <a href="#" class="login-btn"><i class="fa-regular fa-user"></i> Login</a>
+            <div class="cart-container">
+                <i class="fa-solid fa-cart-shopping"></i> <span>Cart</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sub-nav">
+        <div class="sub-nav-inner">
+            <ul class="category-list">
+                <li>Electronics</li>
+                <li>Mobiles</li>
+                <li>Fashion</li>
+                <li>Grocery</li>
+                <li>Home</li>
+                <li>Appliances</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="cart-page-container">
+        
+        <div class="cart-left">
+            <div class="cart-header">
+                <h2>Shopping Cart (3)</h2>
+            </div>
+
+            <div class="cart-item">
+                <div class="item-img-box">
+                    <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=200&auto=format&fit=crop" alt="Samsung S23">
+                </div>
+                <div class="item-details">
+                    <div class="item-title">Samsung Galaxy S23 Ultra 5G (Phantom Black, 12GB RAM, 256GB)</div>
+                    <div class="item-price-row">
+                        <span class="curr-price">₹89,999</span>
+                        <span class="orig-price">₹1,24,999</span>
+                        <span class="off-percent">28% off</span>
+                    </div>
+                    <div class="item-controls">
+                        <div class="qty-control">
+                            <button class="qty-btn disabled">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn">+</button>
+                        </div>
+                        <div class="remove-btn">
+                            <i class="fa-solid fa-trash-can"></i> Remove
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <div class="item-img-box">
+                    <img src="https://www.favobliss.com/image/cache/catalog/philips-digital-air-fryer-touch-panel-1400w-hd9252-90-black%20(5)-550x550.jpg" alt="Air Fryer">
+                </div>
+                <div class="item-details">
+                    <div class="item-title">Philips Air Fryer HD9252/90 with Rapid Air Technology (1400W, 4.1L)</div>
+                    <div class="item-price-row">
+                        <span class="curr-price">₹7,999</span>
+                        <span class="orig-price">₹12,995</span>
+                        <span class="off-percent">38% off</span>
+                    </div>
+                    <div class="item-controls">
+                        <div class="qty-control">
+                            <button class="qty-btn">-</button>
+                            <input type="text" value="2" readonly>
+                            <button class="qty-btn">+</button>
+                        </div>
+                        <div class="remove-btn">
+                            <i class="fa-solid fa-trash-can"></i> Remove
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <div class="item-img-box">
+                    <img src="img3.jpg" alt="Earbuds">
+                </div>
+                <div class="item-details">
+                    <div class="item-title">boAt Airdopes 131 TWS Earbuds with 60H Playback</div>
+                    <div class="item-price-row">
+                        <span class="curr-price">₹1,299</span>
+                        <span class="orig-price">₹2,990</span>
+                        <span class="off-percent">57% off</span>
+                    </div>
+                    <div class="item-controls">
+                        <div class="qty-control">
+                            <button class="qty-btn disabled">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn">+</button>
+                        </div>
+                        <div class="remove-btn">
+                            <i class="fa-solid fa-trash-can"></i> Remove
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cart-right">
+            <div class="price-box">
+                <div class="price-header">Price Details</div>
+                
+                <div class="price-row">
+                    <span>Price (4 items)</span>
+                    <span>₹1,53,979</span>
+                </div>
+                
+                <div class="price-row">
+                    <span>Discount</span>
+                    <span class="text-green">-₹46,683</span>
+                </div>
+                
+                <div class="price-row">
+                    <span>Delivery Charges</span>
+                    <span class="text-green">FREE</span>
+                </div>
+
+                <div class="total-row">
+                    <span>Total Amount</span>
+                    <span>₹1,07,296</span>
+                </div>
+
+                <div class="savings-msg">
+                    You will save ₹46,683 on this order
+                </div>
+
+                <button class="place-order-btn" onclick="window.location.href='checkout.html'">Place Order</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - FlipShop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo-container" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <span class="logo-text">FlipShop</span>
+            </div>
+            <div class="search-area">
+                <input type="text" class="search-input" placeholder="Search for products, brands and more">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <a href="#" class="login-btn"><i class="fa-regular fa-user"></i> Login</a>
+            <div class="cart-container" onclick="window.location.href='cart.html'" style="cursor: pointer;">
+                <i class="fa-solid fa-cart-shopping"></i> <span>Cart</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="checkout-container">
+        
+        <h2 class="page-heading">Checkout</h2>
+
+        <div class="checkout-layout">
+            
+            <div class="checkout-left">
+                
+                <div class="step-section">
+                    <div class="step-header">
+                        <span class="step-number">1</span>
+                        <h3>Select Delivery Address</h3>
+                    </div>
+
+                    <div class="address-box selected">
+                        <div class="radio-col">
+                            <input type="radio" name="address" checked>
+                        </div>
+                        <div class="address-details">
+                            <div class="addr-type">Home <i class="fa-solid fa-circle-check"></i></div>
+                            <div class="addr-text">123, MG Road, Bangalore - 560001</div>
+                            <div class="addr-phone">+91 9876543210</div>
+                        </div>
+                    </div>
+
+                    <div class="address-box">
+                        <div class="radio-col">
+                            <input type="radio" name="address">
+                        </div>
+                        <div class="address-details">
+                            <div class="addr-type">Office</div>
+                            <div class="addr-text">456, Indiranagar, Bangalore - 560038</div>
+                            <div class="addr-phone">+91 9876543211</div>
+                        </div>
+                    </div>
+
+                    <div class="add-new-address">
+                        + Add New Address
+                    </div>
+                </div>
+
+                <div class="step-section">
+                    <div class="step-header">
+                        <span class="step-number">2</span>
+                        <h3>Payment Options</h3>
+                    </div>
+
+                    <div class="payment-option selected">
+                        <div class="radio-col"><input type="radio" name="payment" checked></div>
+                        <div class="pay-details">
+                            <div class="pay-title"><i class="fa-solid fa-mobile-screen"></i> UPI</div>
+                            <div class="pay-desc">Pay via Google Pay, PhonePe, Paytm</div>
+                        </div>
+                    </div>
+
+                    <div class="payment-option">
+                        <div class="radio-col"><input type="radio" name="payment"></div>
+                        <div class="pay-details">
+                            <div class="pay-title"><i class="fa-regular fa-credit-card"></i> Credit / Debit Card</div>
+                            <div class="pay-desc">Visa, Mastercard, Rupay & more</div>
+                        </div>
+                    </div>
+
+                    <div class="payment-option">
+                        <div class="radio-col"><input type="radio" name="payment"></div>
+                        <div class="pay-details">
+                            <div class="pay-title"><i class="fa-solid fa-building-columns"></i> Net Banking</div>
+                            <div class="pay-desc">All major banks supported</div>
+                        </div>
+                    </div>
+
+                    <div class="payment-option">
+                        <div class="radio-col"><input type="radio" name="payment"></div>
+                        <div class="pay-details">
+                            <div class="pay-title"><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery</div>
+                            <div class="pay-desc">Pay when you receive</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="checkout-right">
+                <div class="summary-card">
+                    <h3 class="summary-header">Order Summary</h3>
+                    
+                    <div class="summary-item">
+                        <div class="sum-name">Samsung Galaxy S23 Ultra</div>
+                        <div class="sum-qty">Qty: 1</div>
+                        <div class="sum-price">₹89,999</div>
+                    </div>
+
+                    <div class="summary-item">
+                        <div class="sum-name">Philips Air Fryer</div>
+                        <div class="sum-qty">Qty: 2</div>
+                        <div class="sum-price">₹15,998</div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="price-row">
+                        <span>Subtotal</span>
+                        <span>₹1,05,997</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Discount</span>
+                        <span class="green-text">-₹15,000</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Delivery</span>
+                        <span class="green-text">FREE</span>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="total-row">
+                        <span>Total</span>
+                        <span>₹90,997</span>
+                    </div>
+
+                    <button class="confirm-btn">Confirm & Pay ₹90,997</button>
+
+                    <div class="secure-badge">
+                        <i class="fa-solid fa-shield-halved"></i> Safe and Secure Payments
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
